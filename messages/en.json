@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "Medical Billing Services": "Medical Billing Services",
+    "Solutions": "Solutions",
+    "code": "code",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "pricing": "pricing",
+    "signIn": "Sign in"
+  },
+    "hero": {
+    "title": "One Platform Complete Billing Control",
+    "titlehash": "Canadian, province, mac",
+    "titleSecond": "Billing Made Simple",
+    "subtitle": "Complete RCM solutions for Canadian healthcare providers with",
+    "subtitleSecond": "provincial compliance",
+    "selectProvince": "Select Your Province",
+    "cta": "Get Started"
+  },
+  "provinces": {
+    "ontario": "Ontario (OHIP)",
+    "bc": "British Columbia (MSP)",
+    "quebec": "Quebec (RAMQ)",
+    "alberta": "Alberta",
+    "manitoba": "Manitoba",
+    "other": "Other Provinces"
+  },
+  "features": {
+    "title": "Provincial Healthcare Systems",
+    "description": "Specialized solutions for each Canadian province's healthcare system",
+    "ohip": "Ontario Health Insurance Plan",
+    "ohipDesc": "Full OHIP billing compliance and submission support",
+    "msp": "Medical Services Plan",
+    "mspDesc": "BC MSP billing and claims management",
+    "ramq": "Régie de l'assurance maladie du Québec",
+    "ramqDesc": "Quebec healthcare billing and compliance",
+    "alberta": "Alberta Health Services",
+    "albertaDesc": "AHS billing and claims processing",
+    "manitoba": "Manitoba Health",
+    "manitobaDesc": "Manitoba healthcare billing services",
+    "other": "Other Provinces",
+    "otherDesc": "Billing support for other Canadian provinces"
+  },
+  "services": {
+    "title": "Our Solutions",
+    "eligibility": "Eligibility Verification",
+    "coding": "Medical Coding",
+    "claims": "Claims Management",
+    "followUp": "Claim Follow-up",
+    "denials": "Denial Management",
+    "consulting": "Revenue Cycle Consulting"
+  },
+  "stats": {
+    "firstPass": "92% First-Pass Acceptance",
+    "turnaround": "24-Hour Claim Turnaround",
+    "denials": "4% Denial Rate",
+    "providers": "1000+ Providers Trust Us"
+  },
+  "testimonials": {
+    "title": "What Healthcare Providers Say",
+    "description": "Real results from Canadian healthcare facilities"
+  },
+  "blog": {
+    "title": "Latest Blog Posts",
+    "viewAll": "View All Posts",
+    "readMore": "Read More"
+  },
+  "documentation": {
+    "title": "Documentation",
+    "description": "Complete guides and resources for Canadian healthcare billing"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How long does claims processing take?",
+    "a1": "Our average turnaround is 24 hours from receipt of clean claims.",
+    "q2": "Do you handle all provincial systems?",
+    "a2": "Yes, we specialize in OHIP, MSP, RAMQ, and other provincial systems.",
+    "q3": "What Products data security and PIPEDA compliance?",
+    "a3": "We maintain full PIPEDA compliance with encrypted data storage and regular security audits.",
+    "q4": "Can you help with denied claims?",
+    "a4": "Absolutely. We have a dedicated denial management team with 85% resolution rate."
+  },
+  "footer": {
+    "Products": "Products Us",
+    "pricing": "pricing",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "compliance": "PIPEDA Compliant",
+    "copyright": "© 2024 Canadian Healthcare Billing Solutions. All rights reserved.",
+    "offices": "Canadian Offices"
+  }
+}
