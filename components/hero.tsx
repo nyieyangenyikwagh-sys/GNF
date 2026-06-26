@@ -1,6 +1,6 @@
 'use client'
 
-import { Manrope, Mada } from 'next/font/google'
+import { Manrope, Great_Vibes } from 'next/font/google'
 import Image from 'next/image'
 import { motion, type Variants } from 'framer-motion'
 import { useTranslations } from 'next-intl'
@@ -9,6 +9,7 @@ import {
   Settings2,
   Gauge,
   TrendingUp,
+  Play,
 } from 'lucide-react'
 
 import ProvinceSelector from './province-selector'
@@ -19,12 +20,12 @@ import MobileAppPromo from './mobile-app-promo'
 
 const headingFont = Manrope({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: '400',
   display: 'swap',
 })
-const madFont = Mada({
+const madFont = Great_Vibes({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: '400',
   display: 'swap',
 })
 interface HeroProps {
@@ -303,48 +304,90 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="pb-0">
-            <div className="border-t border-white/20 pt-6">
-              <p className="text-center text-blue-100 text-sm mb-8">
-                Trusted by healthcare providers across Canada
-              </p>
+        {/* Stats */}
+<div className="pb-0">
+  <div className="border-t border-white/20 pt-6">
+    <p className="text-center text-blue-100 text-sm mb-8">
+      Trusted by healthcare providers across Canada
+    </p>
 
-              <div className="flex flex-wrap justify-center gap-8">
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-white">
-                    500+
-                  </p>
-                  <p className="text-blue-100 text-sm">
-                    Healthcare Providers
-                  </p>
-                </div>
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-40">
+      {/* Stats */}
+      <div className="flex flex-wrap justify-center gap-8">
+        <div className="text-center">
+          <p className="text-4xl font-bold text-white">
+            500+
+          </p>
+          <p className="text-blue-100 text-sm">
+            Healthcare Providers
+          </p>
+        </div>
 
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-white">
-                    2.5M+
-                  </p>
-                  <p className="text-blue-100 text-sm">
-                    Claims Processed
-                  </p>
-                </div>
+        <div className="text-center">
+          <p className="text-4xl font-bold text-white">
+            2.5M+
+          </p>
+          <p className="text-blue-100 text-sm">
+            Claims Processed
+          </p>
+        </div>
 
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-white">
-                    99.9%
-                  </p>
-                  <p className="text-blue-100 text-sm">
-                    Uptime
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="text-center">
+          <p className="text-4xl font-bold text-white">
+            99.9%
+          </p>
+          <p className="text-blue-100 text-sm">
+            Uptime
+          </p>
+        </div>
+      </div>
 
-            {/* Logo Marquee */}
-            <div className="mt-10 mb-32 relative z-30">
-              <LogoMarquee />
-            </div>
-          </div>
+      {/* Google Play Button */}
+      <a
+        href="#"
+        className="
+          group
+          flex
+          h-[68px]
+          min-w-[230px]
+          items-center
+          gap-4
+          rounded-lg
+          border
+          border-white/45
+          bg-white/5
+          px-6
+          text-white
+          backdrop-blur
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:bg-white/15
+          hover:shadow-2xl
+          hover:shadow-black/20
+        "
+      >
+        <span className="flex h-10 w-10 items-center justify-center">
+          <Play size={36} fill="white" />
+        </span>
+
+        <span className="leading-tight">
+          <span className="block text-sm font-semibold">
+            GET IT ON
+          </span>
+          <span className="block text-2xl font-extrabold">
+            Google Play
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  {/* Logo Marquee */}
+  <div className="mt-10 mb-32 relative z-30">
+    <LogoMarquee />
+  </div>
+</div>
         </div>
 
         {/* Stylish Floating Text */}
@@ -373,34 +416,33 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
               opacity: [0.25, 1, 0.25],
             }}
             transition={{
-              duration: 3,
+              duration: 7,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
             style={{
-              WebkitTextStroke: '1px rgba(255,255,255,0.35)',
+              WebkitTextStroke: '0.2px rgba(212, 29, 29, 0.56)',
               textShadow:
-                '0 0 20px rgba(37,99,235,0.45), 0 0 45px rgba(6,182,212,0.35)',
+                '0 0 20px rgba(255, 238, 238, 0.45), 0 0 45px rgba(247, 179, 179, 0.69)',
             }}
             className={`
               ${madFont.className}
               inline-block
               bg-gradient-to-r
-              from-blue-950
-              via-blue-600
+              from-red-950
+              via-white-600
               to-cyan-400
               bg-[length:250%_250%]
               bg-clip-text
               text-transparent
-              text-1xl
-              md:text-1xl
-              lg:text-1xl
-              tracking-wide
-              uppercase
+              text-3xl
+              md:text-4xl
+              lg:text-5xl
+              tracking-normal
               drop-shadow-2xl
             `}
           >
-            Faster Claims. Better Care.
+            ....Faster Claims, Better Care.
           </motion.p>
         </motion.div>
 

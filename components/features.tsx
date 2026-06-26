@@ -105,7 +105,7 @@ export default function Features() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* SECTION HEADER */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
+          <span className="inline-flex items-center rounded-full border border-blue-200 bg-purplue-50 px-4 py-2 text-sm font-medium text-blue-700">
             Provincial Healthcare Solutions
           </span>
 
@@ -243,7 +243,7 @@ export default function Features() {
               onClick={() => setSelectedProvince(key)}
               className={`group rounded-3xl p-8 transition-all duration-300 cursor-pointer ${
                 selectedProvince === key
-                  ? 'bg-blue-600 text-white shadow-xl scale-[1.02]'
+                  ? 'bg-purplue-600 text-white shadow-xl scale-[1.02]'
                   : 'bg-white border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1'
               }`}
             >

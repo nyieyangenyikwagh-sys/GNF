@@ -20,7 +20,7 @@ export default function ProvinceTabs({
 }: ProvinceTabsProps) {
   return (
     <div className="flex justify-center mb-12">
-      <div className="bg-white rounded-full p-2 shadow-lg border border-gray-100 overflow-x-auto">
+      <div className="bg-black rounded-full p-2 shadow-lg border border-gray-100 overflow-x-auto">
         <div className="flex gap-2">
           {provinces.map((province) => (
             <button
@@ -29,7 +29,7 @@ export default function ProvinceTabs({
               className={`px-9 py-6 rounded-full font-medium transition-all duration-300 whitespace-nowrap ${
                 selectedProvince === province.id
                   ? 'bg-[rgb(0,38,77)] text-white shadow-lg'
-                    : 'text-[rgb(142, 8, 8)] hover:bg-gray-100'
+                    : ':text-red-700 hover:bg-purplue-400'
                     }`}
             >
               {province.label}

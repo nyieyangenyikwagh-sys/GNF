@@ -59,7 +59,7 @@ export default function Header() {
   className="
     absolute
     top-full
-    left-[25vw]
+    left-[35vw]
     -translate-x-1/2
     pt-10
     hidden
@@ -72,14 +72,14 @@ export default function Header() {
               className="
                 w-[1300px]
                 rounded-3xl
-                bg-white
+                bg-red-50
                 shadow-2xl
                 border
                 border-gray-100
                 p-10
               "
             >
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid grid-cols-4 gap-5">
 
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-blue-900">
@@ -94,21 +94,68 @@ export default function Header() {
                 </div>
 
                 <div className="space-y-4">
-                  <a href="#" className="block hover:text-blue-600">
+                  <a href="#" className="block text-gray-800 hover:text-blue-600">
                     Company
                   </a>
 
-                  <a href="#" className="block hover:text-blue-600">
+                  <a href="#" className="block text-gray-800 hover:text-blue-600">
                     Our Mission
                   </a>
 
-                  <a href="#" className="block hover:text-blue-600">
+                  <a href="#" className="block text-gray-800 hover:text-blue-600">
                     Leadership
                   </a>
 
-                  <a href="#" className="block hover:text-blue-600">
+                  <a href="#" className="block text-gray-800 hover:text-blue-600">
                     Careers
                   </a>
+                </div>
+
+                  <div>
+                  <h3 className="text-xl font-semibold mb-5 text-blue-900">
+                    Billing Services
+                  </h3>
+
+                  <div className="space-y-3">
+                    <a href="#" className="block text-gray-800 hover:text-blue-600">
+                      OHIP Billing
+                    </a>
+
+                    <a href="#" className="block text-gray-800 hover:text-blue-600">
+                      AHCIP Billing
+                    </a>
+
+                    <a href="#" className="block text-gray-800  hover:text-blue-600">
+                      MSP Billing
+                    </a>
+
+                    <a href="#" className="block hover:text-blue-600">
+                      Provincial Billing
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-5 text-blue-900">
+                    Billing Services
+                  </h3>
+
+                  <div className="space-y-3">
+                    <a href="#" className="block text-gray-800 hover:text-blue-600">
+                      OHIP Billing
+                    </a>
+
+                    <a href="#" className="block text-gray-800 hover:text-blue-600">
+                      AHCIP Billing
+                    </a>
+
+                    <a href="#" className="block text-gray-800  hover:text-blue-600">
+                      MSP Billing
+                    </a>
+
+                    <a href="#" className="block hover:text-blue-600">
+                      Provincial Billing
+                    </a>
+                  </div>
                 </div>
 
               </div>
@@ -147,7 +194,7 @@ export default function Header() {
               className="
                 w-[1300px]
                 rounded-3xl
-                bg-white
+                  bg-red-50
                 shadow-2xl
                 border
                 border-gray-100
@@ -247,20 +294,31 @@ export default function Header() {
             {link.label}
           </button>
 
-          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 hidden group-hover:block z-50">
-
+          {/* Hover Safe Area */}
+             <div
+  className="
+    absolute
+    top-full
+    left-[15vw]
+    -translate-x-1/2
+    pt-10
+    hidden
+    group-hover:block
+    z-50
+  "
+>
             <div
               className="
-                w-[800px]
+                w-[1300px]
                 rounded-3xl
-                bg-white
+                bg-red-50
                 shadow-2xl
                 border
                 border-gray-100
                 p-10
               "
             >
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid grid-cols-3 gap-10">
 
                 <div>
                   <h3 className="text-xl font-semibold mb-5 text-blue-900">
@@ -344,7 +402,7 @@ export default function Header() {
             {/* Sign In Button */}
             <Link
               href="#signin"
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+              className="px-4 py-2 text-sm font-medium text-white bg-purple-500 hover:bg-red-800 rounded transition-colors"
             >
               {t('signIn')}
             </Link>

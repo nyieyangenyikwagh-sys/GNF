@@ -187,7 +187,7 @@ export default function DocumentationPage() {
                 ? 'Contactez notre équipe de support pour toute question ou assistance.'
                 : 'Contact our support team for any questions or assistance.'}
             </p>
-            <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+            <button className="px-8 py-3 bg-purplue-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
               {locale === 'fr' ? 'Nous contacter' : 'Contact Us'}
             </button>
           </div>

@@ -49,8 +49,8 @@ export default function ProvinceSelector({
                 onSelect(province.id)
                 setIsOpen(false)
               }}
-              className={`w-full text-left px-4 py-3 hover:bg-blue-50 transition-colors ${
-                selectedProvince === province.id ? 'bg-blue-100 text-blue-900 font-semibold' : 'text-gray-700'
+              className={`w-full text-left px-4 py-3 hover:bg-purplue-50 transition-colors ${
+                selectedProvince === province.id ? 'bg-purplue-100 text-blue-900 font-semibold' : 'text-gray-700'
               }`}
             >
               {province.label}

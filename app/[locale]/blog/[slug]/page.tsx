@@ -71,7 +71,7 @@ export default function BlogPostPage() {
               <User size={18} />
               {post.author}
             </div>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+            <span className="px-3 py-1 bg-purplue-100 text-blue-700 rounded-full text-sm font-semibold">
               {post.category}
             </span>
           </div>
@@ -93,7 +93,7 @@ export default function BlogPostPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Continue Reading</h3>
             <Link
               href={`/${locale}/blog`}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-purplue-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
             >
               View All Posts →
             </Link>

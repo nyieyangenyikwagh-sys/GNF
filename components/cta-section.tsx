@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react'
 
 export default function CTASection() {
   return (
-    <section id="contact" className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
+   <section className="py-24 bg-gradient-to-r from-[#825d80] to-[#755070]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
           Ready to Streamline Your Healthcare Billing?
@@ -14,7 +14,7 @@ export default function CTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+          <button className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-purplue-50 transition-colors">
             <Mail size={20} />
             Get Free Consultation
           </button>

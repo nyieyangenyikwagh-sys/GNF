@@ -56,7 +56,7 @@ export default function BlogPage() {
                     <User size={16} />
                     {post.author}
                   </div>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-semibold">
+                  <span className="px-2 py-1 bg-purplue-100 text-blue-700 rounded text-xs font-semibold">
                     {post.category}
                   </span>
                 </div>

@@ -31,7 +31,7 @@ export default function BlogSection() {
           </div>
           <Link
             href={`/${locale}/blog`}
-            className="hidden sm:inline-flex items-center gap-2 px-6 py-3 text-blue-600 font-semibold hover:text-blue-700 transition-colors border border-blue-600 rounded-lg hover:bg-blue-50"
+            className="hidden sm:inline-flex items-center gap-2 px-6 py-3 text-blue-600 font-semibold hover:text-blue-700 transition-colors border border-blue-600 rounded-lg hover:bg-purplue-50"
           >
             View All
             <ArrowRight size={18} />
@@ -84,7 +84,7 @@ export default function BlogSection() {
         <div className="mt-8 sm:hidden">
           <Link
             href={`/${locale}/blog`}
-            className="block w-full py-3 text-center text-blue-600 font-semibold hover:text-blue-700 transition-colors border border-blue-600 rounded-lg hover:bg-blue-50"
+            className="block w-full py-3 text-center text-blue-600 font-semibold hover:text-blue-700 transition-colors border border-blue-600 rounded-lg hover:bg-purplue-50"
           >
             View All Posts
           </Link>
