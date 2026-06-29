@@ -311,7 +311,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
       Trusted by healthcare providers across Canada
     </p>
 
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-40">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-">
       {/* Stats */}
       <div className="flex flex-wrap justify-center gap-8">
         <div className="text-center">
