@@ -180,15 +180,15 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         </motion.div>
 
         {/* Main Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-6">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6">
           <div
             className="
               grid
               lg:grid-cols-[2fr_1fr]
-              gap-12
+              gap-8 lg:gap-12
               items-center
               min-h-[68vh]
-              pt-10
+              pt-24 sm:pt-28 lg:pt-10
             "
           >
             {/* LEFT CONTENT */}
@@ -260,7 +260,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                     {t('selectProvince')}
                   </label>
 
-                  <ProvinceSelector onSelect={onProvinceSelect} />
+                  <ProvinceSelector onSelect={(province) => onProvinceSelect?.(province)} />
                 </div>
 
                 <button
@@ -311,9 +311,9 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
       Trusted by healthcare providers across Canada
     </p>
 
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-">
+    <div className="flex flex-col items-center justify-center gap-8 xl:flex-row xl:gap-12">
       {/* Stats */}
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex w-full flex-wrap justify-center gap-x-8 gap-y-5 sm:gap-x-12 xl:w-auto xl:justify-end">
         <div className="text-center">
           <p className="text-4xl font-bold text-white">
             500+
@@ -348,19 +348,24 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         className="
           group
           flex
-          h-[68px]
-          min-w-[230px]
+          h-[64px]
+          w-full
+          max-w-[250px]
+          justify-center
+          sm:w-auto
+          sm:min-w-[250px]
           items-center
           gap-4
           rounded-lg
           border
           border-white/45
           bg-white/5
-          px-6
+          px-5
           text-white
           backdrop-blur
           transition-all
           duration-300
+          xl:ml-4
           hover:-translate-y-1
           hover:bg-white/15
           hover:shadow-2xl

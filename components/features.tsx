@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProvinceTabs from '@/components/ProvinceTabs'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -91,8 +91,14 @@ const provinceFeatures: Record<
   },
 }
 
-export default function Features() {
-  const [selectedProvince, setSelectedProvince] = useState('ontario')
+export default function Features({ selectedProvince: initialProvince }: FeaturesProps) {
+  const [selectedProvince, setSelectedProvince] = useState(initialProvince ?? 'ontario')
+
+  useEffect(() => {
+    if (initialProvince && provinceFeatures[initialProvince]) {
+      setSelectedProvince(initialProvince)
+    }
+  }, [initialProvince])
 
   const feature =
     provinceFeatures[selectedProvince] || provinceFeatures.ontario
@@ -102,14 +108,10 @@ export default function Features() {
       id="services"
       className="relative overflow-hidden pt-24 pb-24 bg-gradient-to-b from-white via-slate-50 to-slate-100"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* SECTION HEADER */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center rounded-full border border-blue-200 bg-purplue-50 px-4 py-2 text-sm font-medium text-blue-700">
-            Provincial Healthcare Solutions
-          </span>
-
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
             Healthcare Billing Built For Canada
           </h2>
 
@@ -132,7 +134,7 @@ export default function Features() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="relative overflow-hidden rounded-[22px] bg-[#111827] shadow-2xl min-h-[450px] lg:min-w-[850px]"
+            className="relative overflow-hidden rounded-[22px] bg-[#111827] shadow-2xl min-h-[450px]"
           >
             {/* Glow Effects */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-cyan-500/10" />
@@ -197,9 +199,9 @@ export default function Features() {
               </div>
 
               {/* RIGHT SIDE VISUAL */}
-              <div className="relative min-h-[500px]">
+              <div className="relative min-h-[280px] sm:min-h-[400px] lg:min-h-[500px]">
                 <img
-                  src="/images/healthcare-dashboard.jpg"
+                  src="/cmb.jpg"
                   alt="Healthcare Dashboard"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -207,7 +209,7 @@ export default function Features() {
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#111827]/70" />
 
                 {/* FLOATING ANALYTICS CARD */}
-                <div className="absolute right-6 bottom-6 w-[320px] rounded-3xl border border-white/10 bg-black/80 backdrop-blur-xl p-6 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
+                <div className="absolute bottom-4 right-4 w-[calc(100%-2rem)] sm:bottom-6 sm:right-6 sm:w-[320px] rounded-3xl border border-white/10 bg-black/80 backdrop-blur-xl p-5 sm:p-6 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
                   <div className="mb-4 flex items-center justify-between">
                     <span className="text-blue-400 text-sm font-medium">
                       Billing Analytics

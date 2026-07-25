@@ -206,7 +206,7 @@ export default function MobileAppPromo() {
             "
           >
             <Image
-              src="/images/mobile-app-phones.png"
+              src="/Screenshot 2026-06-19 152242.png"
               alt="Mobile app preview"
               fill
               priority

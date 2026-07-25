@@ -20,22 +20,22 @@ type Model = {
 const models: Model[] = [
   {
     name: 'Newly Practicing Physicians',
-    image: '/images/newly-practicing-physicians.jpg',
+    image: '/medium-shot-smiley-doctor-holding-tablet.jpg',
     links: ['Billing Setup', 'Claim Support', 'Practice Growth'],
   },
   {
     name: 'Individual Physicians',
-    image: '/images/individual-physicians.jpg',
+    image: '/woman-doctor-wearing-white-coat-with-stethoscope-with-smile-face-pointing-with-finger-side-standing-isolated-blue.jpg',
     links: ['Ontario', 'British Columbia', 'Alberta'],
   },
   {
     name: 'Physician Groups',
-    image: '/images/physician-groups.jpg',
+    image: '/young-nurse-white-uniform-checks-patient-with-stethoscope-front-view.jpg',
     links: ['Ontario', 'British Columbia', 'Alberta'],
   },
   {
     name: 'Medical Office Assistants & Billing Agents',
-    image: '/images/medical-office-assistants.jpg',
+    image: '/young-nurse-face-mask-hand-gloves-checks-patient-with-stethoscope.jpg',
     links: ['Billing Training', 'Claim Review', 'Office Support'],
   },
 ]

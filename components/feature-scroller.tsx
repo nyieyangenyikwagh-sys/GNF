@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-const items = [
+const defaultItems = [
   'Direct Photoshoots',
   'Cast Characters',
   'Stay On Brand',
@@ -11,7 +11,11 @@ const items = [
   'Draft Storyboards',
 ]
 
-export default function FeatureScroller() {
+interface FeatureScrollerProps {
+  items?: string[]
+}
+
+export default function FeatureScroller({ items = defaultItems }: FeatureScrollerProps) {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {

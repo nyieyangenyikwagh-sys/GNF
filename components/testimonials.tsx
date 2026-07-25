@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { Star, Quote, Sparkles } from 'lucide-react'
+import { Star, Quote } from 'lucide-react'
 import { Manrope, Playfair_Display } from 'next/font/google'
 
 const headingFont = Playfair_Display({
@@ -67,11 +67,6 @@ export default function Testimonials() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-center mb-20"
         >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/70 px-5 py-2 text-sm font-bold text-blue-700 shadow-sm backdrop-blur">
-            <Sparkles size={16} />
-            Trusted by healthcare professionals
-          </div>
-
           <h2
             className={`
               ${headingFont.className}
