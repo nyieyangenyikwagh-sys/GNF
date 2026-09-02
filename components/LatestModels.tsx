@@ -3,13 +3,6 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import { Manrope } from 'next/font/google'
-
-const headingFont = Manrope({
-  subsets: ['latin'],
-  weight: ['700', '800'],
-  display: 'swap',
-})
 
 type Model = {
   name: string
@@ -53,7 +46,7 @@ export default function LatestModels() {
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
           className={`
-            ${headingFont.className}
+            font-sans
             text-4xl
             md:text-5xl
             font-extrabold
@@ -178,7 +171,7 @@ export default function LatestModels() {
               >
                 <h3
                   className={`
-                    ${headingFont.className}
+                    font-sans
                     text-white
                     text-[34px]
                     md:text-[38px]
@@ -213,7 +206,7 @@ export default function LatestModels() {
               >
                 <h3
                   className={`
-                    ${headingFont.className}
+                    font-sans
                     text-[30px]
                     font-extrabold
                     leading-tight

@@ -18,10 +18,10 @@
     "cta": "Get Started"
   },
   "provinces": {
-    "ontario": "Ontario (OHIP)",
+    "ontario": " Alberta (AHS)",
     "bc": "British Columbia (MSP)",
     "quebec": "Quebec (RAMQ)",
-    "alberta": "Alberta",
+    "alberta": "Ontario (OHIP)",
     "manitoba": "Manitoba",
     "other": "Other Provinces"
   },

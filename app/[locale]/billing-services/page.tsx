@@ -1,0 +1,4 @@
+import RouteScaffold from '@/components/route-scaffold'
+import { routeMetadata } from '@/lib/route-metadata'
+export const metadata = routeMetadata.billingServices
+export default async function BillingServicesPage({ params }: { params: Promise<{ locale: string }> }) { const { locale } = await params; return <RouteScaffold locale={locale} eyebrow="Medical Billing Services" title="Medical billing services for every practice." description="Whether you are a family physician, specialist, work in a big practice, or a small clinic, are using an EMR or not, we have medical billing management and practice optimization solutions that take the stress out of billings. We work with any EMR and billing workflow to make sure you are maximizing revenue, minimizing  errors and, freeing up your time so you can focus on taking care of your patients. " /> }

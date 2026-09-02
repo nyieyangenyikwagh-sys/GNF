@@ -3,19 +3,6 @@
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
-import { Manrope, Playfair_Display } from 'next/font/google'
-
-const headingFont = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['700', '800'],
-  display: 'swap',
-})
-
-const bodyFont = Manrope({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-})
 
 export default function Testimonials() {
   const t = useTranslations('testimonials')
@@ -47,7 +34,7 @@ export default function Testimonials() {
   return (
     <section
       className={`
-        ${bodyFont.className}
+        font-sans
         relative
         overflow-hidden
         py-28
@@ -69,7 +56,7 @@ export default function Testimonials() {
         >
           <h2
             className={`
-              ${headingFont.className}
+              font-serif
               text-4xl
               sm:text-5xl
               lg:text-6xl

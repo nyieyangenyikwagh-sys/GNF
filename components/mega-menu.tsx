@@ -51,7 +51,7 @@ export default function MegaMenu() {
               </p>
 
               <Link
-                href="/en/solo-billing"
+                href="/en/billing-services"
                 className="mt-6 inline-block rounded-lg border border-red-500 px-4 py-2 text-red-500 transition-all hover:bg-red-500 hover:text-white"
               >
                 Learn More
@@ -62,7 +62,7 @@ export default function MegaMenu() {
             <div>
               <h4 className="mb-4 text-xl font-bold">
                 <Link
-                  href="/en/solo-billing"
+                  href="/en/billing-services"
                   className="transition-colors hover:text-red-600"
                 >
                   Billing Services
@@ -71,28 +71,28 @@ export default function MegaMenu() {
 
               <div className="flex flex-col space-y-3">
                 <Link
-                  href="/en/solo-billing"
+                  href="/en/solutions/ohip-billing"
                   className="transition-colors hover:text-red-600"
                 >
                   OHIP Billing
                 </Link>
 
                 <Link
-                  href="/ahcip"
+                  href="/en/solutions/ahcip-billing"
                   className="transition-colors hover:text-red-600"
                 >
                   AHCIP Billing
                 </Link>
 
                 <Link
-                  href="/msp"
+                  href="/en/solutions/msp-billing"
                   className="transition-colors hover:text-red-600"
                 >
                   MSP Billing
                 </Link>
 
                 <Link
-                  href="/provincial"
+                  href="/en/solutions/other-provinces"
                   className="transition-colors hover:text-red-600"
                 >
                   Provincial Billing
@@ -108,28 +108,28 @@ export default function MegaMenu() {
 
               <div className="flex flex-col space-y-3">
                 <Link
-                  href="/reconciliation"
+                  href="/en/billing-services/billing-care"
                   className="transition-colors hover:text-red-600"
                 >
                   Error Reconciliation
                 </Link>
 
                 <Link
-                  href="/reporting"
+                  href="/en/billing-services/practice-care"
                   className="transition-colors hover:text-red-600"
                 >
                   Revenue Reporting
                 </Link>
 
                 <Link
-                  href="/arp"
+                  href="/en/solutions/ohip-billing/transitioning-to-fho"
                   className="transition-colors hover:text-red-600"
                 >
                   ARP Transition
                 </Link>
 
                 <Link
-                  href="/analytics"
+                  href="/en/solutions/ohip-billing/discover-practice-care"
                   className="transition-colors hover:text-red-600"
                 >
                   Analytics

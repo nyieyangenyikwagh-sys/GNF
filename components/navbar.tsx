@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex h-20 items-center justify-between">
 
-          <Link href="/">
+          <Link href="/en">
             <span className="text-2xl font-bold text-white">
               GNF-Billing
             </span>
@@ -40,24 +40,24 @@ export default function Navbar() {
             <MegaMenu />
 
             <Link
-              href="/code"
+              href="/en/code"
               className="text-white/90 hover:text-white transition-colors"
             >
               code
             </Link>
 
             <Link
-              href="/documentation"
+              href="/en/documentation"
               className="text-white/90 hover:text-white transition-colors"
             >
               Documentation
             </Link>
 
             <Link
-              href="/pricing"
+              href="/en/billing-services"
               className="text-white/90 hover:text-white transition-colors"
             >
-              pricing
+              Billing Services
             </Link>
 
             {/* Dark Mode Toggle */}

@@ -3,19 +3,12 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Play, Star } from 'lucide-react'
-import { Manrope } from 'next/font/google'
-
-const font = Manrope({
-  subsets: ['latin'],
-  weight: ['500', '600', '700', '800'],
-  display: 'swap',
-})
 
 export default function MobileAppPromo() {
   return (
     <section
       className={`
-        ${font.className}
+        font-sans
         relative
         left-1/2
         w-screen
@@ -122,7 +115,7 @@ export default function MobileAppPromo() {
                 hover:shadow-black/20
               "
             >
-              <span className="text-4xl leading-none"></span>
+              <span aria-hidden="true" className="text-4xl leading-none">{'\uF8FF'}</span>
 
               <span className="leading-tight">
                 <span className="block text-sm font-semibold">

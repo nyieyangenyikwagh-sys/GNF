@@ -1,6 +1,5 @@
 'use client'
 
-import { Manrope, Great_Vibes } from 'next/font/google'
 import Image from 'next/image'
 import { motion, type Variants } from 'framer-motion'
 import { useTranslations } from 'next-intl'
@@ -18,16 +17,6 @@ import LogoMarquee from './logo-marquee'
 import { HealthcareIconPattern } from './icons/healthcare-icons'
 import MobileAppPromo from './mobile-app-promo'
 
-const headingFont = Manrope({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap',
-})
-const madFont = Great_Vibes({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap',
-})
 interface HeroProps {
   onProvinceSelect?: (province: string) => void
 }
@@ -108,7 +97,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
 
   return (
     <>
-      <section className="relative min-h-screen overflow-visible flex flex-col justify-center">
+      <section className="relative min-h-screen overflow-hidden flex flex-col justify-center">
         {/* Background Image */}
         {/*
         <div className="absolute inset-0 z-0">
@@ -180,7 +169,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         </motion.div>
 
         {/* Main Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="relative z-20 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             className="
               grid
@@ -224,9 +213,9 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                 <h1
                   className="
                     relative
-                    text-5xl
+                    text-4xl
                     sm:text-6xl
-                    lg:text-[6rem]
+                    lg:text-[5.5rem]
                     xl:text-[7rem]
                     font-black
                     leading-[0.9]
@@ -245,11 +234,11 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                   {t('title')}
                 </h1>
 
-                <p className="text-2xl text-blue-100 mb-2 font-medium">
+                <p className="mb-2 text-xl font-medium text-blue-100 sm:text-2xl">
                   {t('titleSecond')}
                 </p>
 
-                <p className="text-lg text-blue-100/90 mb-6 max-w-2xl">
+                <p className="mb-6 max-w-2xl text-base text-blue-100/90 sm:text-lg">
                   {t('subtitle')}
                 </p>
               </motion.div>
@@ -315,7 +304,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
       {/* Stats */}
       <div className="flex w-full flex-wrap justify-center gap-x-8 gap-y-5 sm:gap-x-12 xl:w-auto xl:justify-end">
         <div className="text-center">
-          <p className="text-4xl font-bold text-white">
+          <p className="text-3xl font-bold text-white sm:text-4xl">
             500+
           </p>
           <p className="text-blue-100 text-sm">
@@ -324,7 +313,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         </div>
 
         <div className="text-center">
-          <p className="text-4xl font-bold text-white">
+          <p className="text-3xl font-bold text-white sm:text-4xl">
             2.5M+
           </p>
           <p className="text-blue-100 text-sm">
@@ -333,7 +322,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         </div>
 
         <div className="text-center">
-          <p className="text-4xl font-bold text-white">
+          <p className="text-3xl font-bold text-white sm:text-4xl">
             99.9%
           </p>
           <p className="text-blue-100 text-sm">
@@ -342,54 +331,38 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         </div>
       </div>
 
-      {/* Google Play Button */}
-      <a
-        href="#"
-        className="
-          group
-          flex
-          h-[64px]
-          w-full
-          max-w-[250px]
-          justify-center
-          sm:w-auto
-          sm:min-w-[250px]
-          items-center
-          gap-4
-          rounded-lg
-          border
-          border-white/45
-          bg-white/5
-          px-5
-          text-white
-          backdrop-blur
-          transition-all
-          duration-300
-          xl:ml-4
-          hover:-translate-y-1
-          hover:bg-white/15
-          hover:shadow-2xl
-          hover:shadow-black/20
-        "
-      >
-        <span className="flex h-10 w-10 items-center justify-center">
-          <Play size={36} fill="white" />
-        </span>
+      <div className="grid w-full grid-cols-2 gap-3 sm:w-auto xl:ml-4">
+        <a
+          href="#"
+          aria-label="Download on the App Store"
+          className="group flex h-[64px] min-w-0 items-center justify-center gap-2 rounded-lg border border-white/45 bg-white/5 px-3 text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:shadow-2xl hover:shadow-black/20 sm:min-w-[220px] sm:gap-4 sm:px-5"
+        >
+          <span aria-hidden="true" className="text-3xl leading-none sm:text-4xl">{'\uF8FF'}</span>
+          <span className="leading-tight">
+            <span className="block text-[10px] font-semibold sm:text-sm">Download on the</span>
+            <span className="block text-base font-extrabold sm:text-2xl">App Store</span>
+          </span>
+        </a>
 
-        <span className="leading-tight">
-          <span className="block text-sm font-semibold">
-            GET IT ON
+        <a
+          href="#"
+          aria-label="Get it on Google Play"
+          className="group flex h-[64px] min-w-0 items-center justify-center gap-2 rounded-lg border border-white/45 bg-white/5 px-3 text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:shadow-2xl hover:shadow-black/20 sm:min-w-[220px] sm:gap-4 sm:px-5"
+        >
+          <span className="flex h-10 w-10 items-center justify-center">
+            <Play className="h-7 w-7 sm:h-9 sm:w-9" fill="white" />
           </span>
-          <span className="block text-2xl font-extrabold">
-            Google Play
+          <span className="leading-tight">
+            <span className="block text-[10px] font-semibold sm:text-sm">GET IT ON</span>
+            <span className="block text-base font-extrabold sm:text-2xl">Google Play</span>
           </span>
-        </span>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 
   {/* Logo Marquee */}
-  <div className="mt-10 mb-32 relative z-30">
+  <div className="relative z-30 mt-8 mb-20 sm:mt-10 lg:mb-32">
     <LogoMarquee />
   </div>
 </div>
@@ -431,7 +404,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                 '0 0 20px rgba(255, 238, 238, 0.45), 0 0 45px rgba(247, 179, 179, 0.69)',
             }}
             className={`
-              ${madFont.className}
+              font-[cursive]
               inline-block
               bg-gradient-to-r
               from-red-950
@@ -440,7 +413,9 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
               bg-[length:250%_250%]
               bg-clip-text
               text-transparent
-              text-3xl
+            hidden
+            sm:inline-block
+            text-3xl
               md:text-4xl
               lg:text-5xl
               tracking-normal
@@ -513,7 +488,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
               <motion.h2
   variants={fadeUp}
   className={`
-    ${headingFont.className}
+    font-sans
     text-5xl
     md:text-6xl
     lg:text-[5.8rem]

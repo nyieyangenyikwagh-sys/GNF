@@ -1,0 +1,110 @@
+export type ContentSection = { title: string; body: string; bullets?: string[] }
+export type ContentLink = { title: string; description: string; href: string }
+export type ContentFaq = { question: string; answer: string }
+export type RouteContent = {
+  sections: ContentSection[]
+  links?: ContentLink[]
+  faq?: ContentFaq[]
+}
+
+export const routeContent: Record<string, RouteContent> = {
+  'Medical billing services for every practice.': {
+    sections: [
+      { title: 'Billing Care ', body: ' Hospital Specialists', bullets: ['I need help getting my daily bills to the MOH (I use paper)', 'I have difficulty managing my errors', 'I feel like I’m missing revenue opportunities'] },
+      { title: 'Practice Care', body: 'Family doctors', bullets: ['I have difficulty managing my errors', 'I feel like I’m missing revenue opportunities', 'I am not realizing my bonus potential'] },
+      { title: 'Billing Care Plus', body: 'Specialists/Family Doctors on EMRs', bullets: ['I have billing integrated into my EMR', 'I have difficulty managing my errors', 'I feel like I’m missing revenue opportunities', 'I am not realizing my bonus potential'] },
+      { title: 'Practice Care Plus', body: 'Specialists/Family Doctors on EMRs', bullets: ['I have difficulty managing my errors', 'I feel like I’m missing revenue opportunities', 'I am not realizing my bonus potential'] },
+         ],
+    faq: [
+      { question: 'Can a clinic keep its current EMR workflow?', answer: 'The appropriate workflow depends on the EMR and practice setup. The first step is to map how claims are created, reviewed, submitted, and corrected today.' },
+      { question: 'Is full-service billing the only option?', answer: 'No. A practice can use focused support for insights, submissions, corrections, reconciliation, or uninsured-service organization.' },
+      { question: 'What should a practice prepare for an assessment?', answer: 'A basic overview of the current workflow, team responsibilities, common claim issues, and reporting needs is usually enough to begin.' },
+    ],
+  },
+  'Practice insight for primary care teams.': { sections: [
+    { title: 'Make billing information usable', body: 'Practice Care organizes operational billing information into a clearer review process, so primary-care leaders can see patterns, questions, and follow-up items without starting from raw claim activity.' },
+    { title: 'Build a repeatable workflow', body: 'Use a regular review cadence to assign follow-up, reduce handoffs, and keep revenue-related administration from competing with patient care.', bullets: ['Practice-level reporting and review', 'Workflow and documentation feedback', 'Administrative tasks prioritized for the team'] },
+  ] },
+  'Billing workflow support for busy practices.': { sections: [
+    { title: 'Keep claims moving', body: 'Billing Care supports a reliable claim lifecycle: submit, identify exceptions, correct what is needed, and follow through on the result.' },
+    { title: 'Work with the systems you use', body: 'The focus is practical integration with an established EMR workflow, so staff do not have to maintain a separate and disconnected process.', bullets: ['Automated submission support', 'Error review and correction workflows', 'Claims-management visibility'] },
+  ] },
+  'Full-service billing support.': { sections: [
+    { title: 'Delegate the operational work', body: 'Billing Care Plus is for practices that need more than claim software. It provides support across manual claim entry, quality checks, submissions, exception work, and reconciliation.' },
+    { title: 'Stay informed without carrying every task', body: 'Physicians and managers retain visibility into billing activity while the day-to-day administrative burden is reduced.', bullets: ['Manual day-sheet or source-document support', 'Pre-submission review', 'Remittance reconciliation and follow-up'] },
+  ] },
+  'A clearer uninsured-services workflow.': { sections: [
+    { title: 'Separate uninsured work from insured claims', body: 'A defined process makes it easier for staff to identify services that need a patient-facing payment or follow-up path instead of entering an insured-claim workflow by default.' },
+    { title: 'Give staff a consistent handoff', body: 'Document the service, clarify responsibility for communication and collection, and keep records organized for the practice.', bullets: ['Consistent documentation steps', 'Clear patient communication handoff', 'Simple internal tracking and follow-up'] },
+  ] },
+  'Billing solutions shaped around your province.': {
+    sections: [
+      { title: 'OHIP billing in Ontario', body: 'A dependable Ontario workflow connects accurate documentation with claim submission, error management, remittance review, and follow-up. Primary-care teams may also need support that considers FHO workflows, while specialists need processes that reflect their own documentation and submission patterns.', bullets: ['Claims submission, correction, and reconciliation', 'Primary-care and FHO workflow support', 'Specialist billing and uninsured-services process support'] },
+      { title: 'MSP billing in British Columbia', body: 'BC practices benefit from a clear claims process that makes exceptions visible, aligns payment information with submitted work, and keeps billing administration from becoming a recurring interruption.', bullets: ['Claims submission and reconciliation', 'Billing-error follow-up', 'Revenue and administrative workflow review'] },
+      { title: 'AHCIP billing in Alberta', body: 'Alberta practices need a claims-management process that can surface exceptions, support payment review, and adapt as the practice considers different payment arrangements.', bullets: ['Claims and error handling', 'Payment and reconciliation workflows', 'Practice administration and payment-model considerations'] },
+      { title: 'Manitoba and Québec', body: 'Manitoba and Québec each require their own billing approach. Manitoba practices should use a workflow tailored to their provincial environment. In Québec, RAMQ is the Régie de l’assurance maladie du Québec; its physician-billing processes should be treated as their own operational context, not as an OHIP or MSP variant.', bullets: ['Dedicated Manitoba billing support', 'Dedicated RAMQ/Québec billing support', 'A structured path for other provincial environments'] },
+    ],
+    links: [
+      { title: 'Discover Practice Care', description: 'See how billing information can support Ontario primary-care operations.', href: '/solutions/ohip-billing/discover-practice-care' },
+      { title: 'Transitioning to FHO', description: 'Plan the billing and workflow side of a transition.', href: '/solutions/ohip-billing/transitioning-to-fho' },
+      { title: 'Billing Services for Specialists', description: 'Explore specialist-focused OHIP billing support.', href: '/solutions/ohip-billing/ohip-billing-services-for-specialists' },
+      { title: 'Physician Transition Services', description: 'Prepare billing operations for a change in practice.', href: '/solutions/ohip-billing/physician-transition-services' },
+      { title: 'Patient Care', description: 'Organize roster and patient-care workflow support.', href: '/solutions/ohip-billing/patient-care' },
+      { title: 'Manitoba Billing', description: 'Visit the dedicated Manitoba route.', href: '/solutions/other-provinces/manitoba-billing' },
+      { title: 'RAMQ Billing', description: 'Visit the dedicated Québec/RAMQ route.', href: '/solutions/other-provinces/ramq-billing' },
+    ],
+  },
+  'OHIP billing support for Ontario practices.': { sections: [
+    { title: 'Manage the complete billing workflow', body: 'Build a process that connects documentation, claim submission, exception review, corrected claims, and remittance reconciliation. This gives clinical and administrative teams a shared view of what has been submitted and what still needs action.' },
+    { title: 'Support the practice model you work in', body: 'Primary-care and FHO teams, specialists, and practices managing uninsured services have different operational needs. The workflow should reflect those differences while keeping documentation accuracy and follow-up consistent.', bullets: ['Primary-care and FHO workflow support', 'Specialist billing review', 'Uninsured-services process organization'] },
+  ], links: [
+    { title: 'Discover Practice Care', description: 'Primary-care insight and workflow support.', href: '/solutions/ohip-billing/discover-practice-care' },
+    { title: 'Transitioning to FHO', description: 'Plan the operational side of a transition.', href: '/solutions/ohip-billing/transitioning-to-fho' },
+    { title: 'Billing Services for Specialists', description: 'Specialist-oriented billing support.', href: '/solutions/ohip-billing/ohip-billing-services-for-specialists' },
+    { title: 'Physician Transition Services', description: 'Support for a practice move or new role.', href: '/solutions/ohip-billing/physician-transition-services' },
+    { title: 'Patient Care', description: 'Roster and patient-care workflows.', href: '/solutions/ohip-billing/patient-care' },
+  ] },
+  'Discover Practice Care.': { sections: [
+    { title: 'See the operational story behind billing activity', body: 'Practice Care brings reporting and review into a format a primary-care team can discuss: what is working, where information is incomplete, and which follow-up tasks deserve attention first.' },
+    { title: 'Turn review into action', body: 'The goal is a practical monthly routine, not another dashboard. Use the review to assign ownership and improve the next billing cycle.', bullets: ['Clear practice-level reporting', 'Prioritized follow-up questions', 'Support for primary-care workflow decisions'] },
+  ] },
+  'Transitioning to FHO.': { sections: [
+    { title: 'Treat the transition as an operational change', body: 'A move to an FHO affects more than billing. It can change how the practice organizes patient information, internal tasks, reporting, and day-to-day follow-up.' },
+    { title: 'Prepare the workflow before the change', body: 'Map the current process, identify who owns each task, and build a transition plan that lets the practice test its administrative readiness.', bullets: ['Current-workflow review', 'Roster and reporting readiness', 'Post-transition billing support'] },
+  ] },
+  'OHIP billing services for specialists.': { sections: [
+    { title: 'Make specialist billing review specific to the practice', body: 'Specialist workflows often involve different documentation patterns, referral context, and clinical settings. A useful billing process starts with the real sequence of work rather than a generic checklist.' },
+    { title: 'Reduce avoidable rework', body: 'Review exceptions, correct claims with the needed documentation, and reconcile remittance information so the team can concentrate on the issues that need judgment.', bullets: ['Specialty-aware workflow review', 'Claim correction and follow-up', 'Revenue and remittance visibility'] },
+  ] },
+  'Physician transition services.': { sections: [
+    { title: 'Carry billing continuity through a practice change', body: 'A new clinic, locum role, partnership, or practice acquisition introduces administrative handoffs. Plan billing responsibilities before the transition so outstanding claims and records have clear ownership.' },
+    { title: 'Start with a practical transition checklist', body: 'Document current workflows, reporting needs, system access, and the backlog of work that must be resolved after the change.', bullets: ['Workflow and responsibility mapping', 'Outstanding-claim continuity', 'Revenue reporting handoff'] },
+  ] },
+  'Patient care and practice workflows.': { sections: [
+    { title: 'Make the patient panel easier to manage', body: 'Patient-care administration works best when rostering, recall, documentation, and billing-related follow-up are considered together rather than as separate spreadsheets and reminders.' },
+    { title: 'Create a reliable follow-up rhythm', body: 'Use a shared process for patient recall and team follow-up so preventive and administrative work can be reviewed without disrupting the clinical day.', bullets: ['Roster and recall workflow support', 'Clear team ownership', 'Documentation and billing handoffs'] },
+  ] },
+  'MSP billing support for BC practices.': { sections: [
+    { title: 'Keep the BC claims process visible', body: 'A resilient MSP workflow makes submission status, billing errors, and needed follow-up clear to the person responsible for resolving them.' },
+    { title: 'Close the loop on payment information', body: 'Reconcile submitted work against payment information and use recurring exceptions to improve the practice process over time.', bullets: ['Claims submission and status review', 'Error-resolution workflow', 'Payment reconciliation and revenue oversight'] },
+  ] },
+  'AHCIP billing support for Alberta practices.': { sections: [
+    { title: 'Manage claims without losing the administrative thread', body: 'AHCIP billing support should provide a clear process for submission, exception handling, corrections, and payment review.' },
+    { title: 'Keep the practice ready for change', body: 'As a practice considers payment arrangements or operational changes, billing administration and reporting should be easy to review and hand off.', bullets: ['Claims-management and error workflows', 'Payment reconciliation', 'Administrative support for practice planning'] },
+  ] },
+  'Billing support beyond Ontario, BC, and Alberta.': { sections: [
+    { title: 'Province-aware support begins with the local workflow', body: 'Provincial billing systems are not interchangeable. A useful engagement starts by understanding how claims, records, payment information, and administrative responsibilities are handled in that practice.' },
+    { title: 'Dedicated Manitoba and Québec treatment', body: 'Manitoba billing and Québec RAMQ billing each receive their own route and operational discussion. Other provincial practices can begin with a workflow assessment rather than a one-size-fits-all process.', bullets: ['Manitoba-specific workflow support', 'RAMQ/Québec-specific workflow support', 'A practical starting point for other provinces'] },
+  ], links: [
+    { title: 'Manitoba Billing', description: 'Explore the Manitoba billing workflow page.', href: '/solutions/other-provinces/manitoba-billing' },
+    { title: 'RAMQ Billing', description: 'Explore the Québec RAMQ workflow page.', href: '/solutions/other-provinces/ramq-billing' },
+  ] },
+  'Billing support for Manitoba practices.': { sections: [
+    { title: 'A Manitoba workflow should stand on its own', body: 'Treat Manitoba billing as its own practice process: document the local workflow, identify claim and payment handoffs, and make exception follow-up visible.' },
+    { title: 'Bring order to daily administration', body: 'A simple routine for submission review, documentation checks, and payment reconciliation can reduce uncertainty for physicians and clinic staff.', bullets: ['Claims and documentation workflow review', 'Exception and follow-up ownership', 'Payment and revenue reporting process'] },
+  ] },
+  'RAMQ billing support for Québec practices.': { sections: [
+    { title: 'Work in the RAMQ context', body: 'RAMQ refers to Québec’s Régie de l’assurance maladie du Québec. Its physician-billing administration should be approached as a Québec-specific workflow, with clear documentation, submission, correction, and payment-review steps.' },
+    { title: 'Keep the process usable for the practice team', body: 'Make responsibilities, records, and follow-up visible so the billing process supports the team’s day-to-day work rather than creating a separate administrative burden.', bullets: ['Québec-specific workflow mapping', 'Claims exception and correction process', 'Payment reconciliation and practice reporting'] },
+  ] },
+}

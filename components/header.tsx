@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown, Menu, Moon, Sun, X } from 'lucide-react'
@@ -27,25 +27,21 @@ const solutionItems: MenuItem[] = [
   ] },
   { title: 'MSP Billing', description: 'Automated MSP billing, error reconciliation, and reporting for BC physicians.', href: '/solutions/msp-billing' },
   { title: 'AHCIP Billing', description: 'Full-service Alberta billing and payment model transition support.', href: '/solutions/ahcip-billing' },
-  { title: 'Other Provinces', description: 'Billing management and revenue optimization beyond Ontario, Alberta, and BC.', href: '/solutions/other-provinces' },
+  { title: 'Other Provinces', description: 'Billing management and revenue optimization beyond Ontario, Alberta, and BC.', href: '/solutions/other-provinces', children: [
+    { title: 'Manitoba Billing', href: '/solutions/other-provinces/manitoba-billing' },
+    { title: 'RAMQ Billing', href: '/solutions/other-provinces/ramq-billing' },
+  ] },
 ]
 
 const codeGroups = [
   { title: 'AHCIP', links: [
-    ['Alberta Health Billing Codes', 'https://www.dr-bill.ca/alberta-health-billing-codes'],
-    ['Alberta Health Explanatory Codes', 'https://www.dr-bill.ca/alberta-health-billing-explanatory-codes-2'],
-    ['Service Codes & Modifiers', 'https://www.dr-bill.ca/blog/ahcip/alberta-health-service-codes-modifier-definitions'],
+    ['Alberta billing support', '/solutions/ahcip-billing'],
   ] },
   { title: 'MSP', links: [
-    ['MSP Billing Codes', 'https://www.dr-bill.ca/msp_billing_codes'],
-    ['MSP Billing Explanatory Codes', 'https://www.dr-bill.ca/msp-billing-explanatory-codes'],
-    ['MSP Cut-off Dates', 'https://www.dr-bill.ca/msp-cut-off-dates'],
+    ['BC billing support', '/solutions/msp-billing'],
   ] },
   { title: 'OHIP', links: [
-    ['OHIP Billing Codes', 'https://www.dr-bill.ca/ohip_billing_codes'],
-    ['OHIP Diagnostic Codes', 'https://www.dr-bill.ca/ohip-diagnostic-codes'],
-    ['OHIP Billing Error Codes', 'https://www.dr-bill.ca/ohip-billing-error-codes'],
-    ['OHIP Cut-off Dates', 'https://www.dr-bill.ca/ohip-cut-off-dates'],
+    ['Ontario billing support', '/solutions/ohip-billing'],
   ] },
 ]
 
@@ -86,21 +82,21 @@ function CodeMenu({ locale }: { locale: string }) {
     <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[min(920px,calc(100vw-2rem))] -translate-x-1/2 pt-2 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
       <div className="rounded-b-3xl border border-slate-100 bg-white p-8 shadow-[0_22px_48px_rgba(26,34,56,.18)]">
         <div className="mb-6 flex items-center justify-between"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-[#7e0e58]">Billing resources</p><h2 className="mt-1 text-2xl font-bold text-slate-800">Provincial billing codes</h2></div><Link href={localHref('/code', locale)} className="text-sm font-bold text-[#7e0e58]">View all resources →</Link></div>
-        <div className="grid grid-cols-3 gap-8">{codeGroups.map(group => <div key={group.title}><h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-slate-800">{group.title}</h3><div className="grid gap-2">{group.links.map(([title, href]) => <a key={href} href={href} target="_blank" rel="noreferrer" className="text-sm leading-5 text-slate-600 hover:text-[#7e0e58]">{title}</a>)}</div></div>)}</div>
+        <div className="grid grid-cols-3 gap-8">{codeGroups.map(group => <div key={group.title}><h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-slate-800">{group.title}</h3><div className="grid gap-2">{group.links.map(([title, href]) => <Link key={href} href={localHref(href, locale)} className="text-sm leading-5 text-slate-600 hover:text-[#7e0e58]">{title}</Link>)}</div></div>)}</div>
       </div>
     </div>
   </div>
 }
 
 export default function Header() {
-  const pathname = usePathname(); const [open, setOpen] = useState(false); const [mounted, setMounted] = useState(false); const { resolvedTheme, setTheme } = useTheme()
-  useEffect(() => setMounted(true), []); const locale = pathname.split('/')[1] || 'en'
+  const pathname = usePathname(); const [open, setOpen] = useState(false); const { resolvedTheme, setTheme } = useTheme()
+  const locale = pathname.split('/')[1] || 'en'
   const mobileLinks = [...billingItems.map(x => x.href), ...solutionItems.map(x => x.href), '/code']
   return <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
     <div className="mx-auto flex h-[74px] max-w-7xl items-center justify-between px-5 lg:px-8">
       <Link href={`/${locale}`} className="flex items-center gap-2.5"><span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#7e0e58] text-xl font-bold text-white">+</span><span className="text-xl font-extrabold tracking-tight text-slate-800">GNF<span className="text-[#7e0e58]">Billing</span></span></Link>
       <nav className="hidden items-center gap-7 xl:flex"><ServiceMenu label="Medical Billing Services" items={billingItems} locale={locale} /><ServiceMenu label="Solutions" items={solutionItems} locale={locale} /><CodeMenu locale={locale} /><Link href={`/${locale}/documentation`} className="text-sm font-semibold text-slate-700 hover:text-[#7e0e58]">Resources</Link></nav>
-      <div className="flex items-center gap-2"><Link href="#contact" className="hidden rounded-full bg-[#7e0e58] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-[#680847] sm:inline-flex">Book assessment</Link><button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="hidden rounded-lg p-2 text-slate-600 hover:bg-slate-100 lg:block">{mounted && resolvedTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}</button><button onClick={() => setOpen(!open)} className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 xl:hidden">{open ? <X /> : <Menu />}</button></div>
+      <div className="flex items-center gap-2"><Link href="#contact" className="hidden rounded-full bg-[#7e0e58] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-[#680847] sm:inline-flex">Book assessment</Link><button suppressHydrationWarning onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="hidden rounded-lg p-2 text-slate-600 hover:bg-slate-100 lg:block">{resolvedTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}</button><button onClick={() => setOpen(!open)} className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 xl:hidden">{open ? <X /> : <Menu />}</button></div>
     </div>
     {open && <div className="border-t border-slate-100 bg-white px-5 py-5 xl:hidden"><div className="grid gap-1">{mobileLinks.map(href => <Link onClick={() => setOpen(false)} key={href} href={localHref(href, locale)} className="rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-700 hover:bg-[#7e0e58]/5">{href.split('/').filter(Boolean).pop()?.replaceAll('-', ' ')}</Link>)}</div></div>}
   </header>

@@ -20,16 +20,18 @@ export default function ProvinceTabs({
 }: ProvinceTabsProps) {
   return (
     <div className="flex justify-center mb-12">
-      <div className="bg-black rounded-full p-2 shadow-lg border border-gray-100 overflow-x-auto">
+      <div className="rounded-full border border-border bg-card p-2 shadow-lg overflow-x-auto">
         <div className="flex gap-2">
           {provinces.map((province) => (
             <button
+              type="button"
               key={province.id}
               onClick={() => onProvinceChange(province.id)}
-              className={`px-9 py-6 rounded-full font-medium transition-all duration-300 whitespace-nowrap ${
+              aria-pressed={selectedProvince === province.id}
+              className={`rounded-full px-9 py-6 font-medium whitespace-nowrap transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 ${
                 selectedProvince === province.id
-                  ? 'bg-[rgb(0,38,77)] text-white shadow-lg'
-                    : ':text-red-700 hover:bg-purplue-400'
+                  ? 'bg-primary text-primary-foreground shadow-lg'
+                  : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                     }`}
             >
               {province.label}
