@@ -13,32 +13,35 @@ export default function MegaMenu() {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      {/* Menu Button */}
-      <button
-        type="button"
-        className="flex items-center gap-1 font-medium text-gray-700 transition-colors hover:text-red-600"
-      >
-        Solutions
-        <ChevronDown size={16} />
-      </button>
+     {/* Menu Button */}
+<button
+  type="button"
+  className="flex items-center gap-1 font-medium text-gray-700 transition-colors hover:text-red-600"
+>
+  Solutions
+  <ChevronDown size={16} />
+</button>
 
-      {open && (
-        <div
-          className="
-            absolute
-            left-1/2
-            top-full
-            z-50
-            mt-4
-            w-[1000px]
-            -translate-x-1/2
-            rounded-2xl
-            bg-white
-            p-8
-            shadow-2xl
-          "
-        >
-          <div className="grid grid-cols-3 gap-10">
+{open && (
+  <div
+    className="
+      absolute
+      left-1/2
+      top-full
+      z-50
+      mt-4
+      w-[calc(100vw-2rem)]
+      max-w-[1000px]
+      -translate-x-1/2
+      rounded-2xl
+      bg-white
+      p-4
+      sm:p-6
+      lg:p-8
+      shadow-2xl
+    "
+  >       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+
             {/* Left Card */}
             <div className="rounded-xl bg-slate-50 p-6">
               <h3 className="mb-4 text-3xl font-light text-red-500">

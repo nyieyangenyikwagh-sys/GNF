@@ -13,6 +13,7 @@ export const routeMetadata: Record<string, Metadata> = {
   specialistBilling: { title: 'OHIP Billing Services for Specialists | GNF Billing', description: 'Specialist-oriented OHIP billing workflow, claim correction, and remittance support.' },
   physicianTransition: { title: 'Physician Transition Services | GNF Billing', description: 'Support billing continuity and administrative handoffs during a practice transition.' },
   patientCare: { title: 'Patient Care Workflows | GNF Billing', description: 'Roster, recall, documentation, and billing-related workflow support for Ontario practices.' },
+  hospitalGroupBilling: { title: 'Hospital and Group Billing Services | GNF Billing', description: 'Coordinated OHIP billing workflows, reporting, and claim follow-up for hospitals and physician groups.' },
   mspBilling: { title: 'MSP Billing Support | GNF Billing', description: 'BC MSP claims submission, error follow-up, payment reconciliation, and workflow support.' },
   ahcipBilling: { title: 'AHCIP Billing Support | GNF Billing', description: 'Alberta claims management, payment reconciliation, and practice administration support.' },
   otherProvinces: { title: 'Other Provincial Billing Support | GNF Billing', description: 'Dedicated Manitoba and Québec RAMQ billing workflow support, plus other provinces.' },

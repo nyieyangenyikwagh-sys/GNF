@@ -97,7 +97,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
 
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden flex flex-col justify-center">
+      <section className="relative flex min-h-[42rem] flex-col justify-center overflow-hidden sm:min-h-screen">
         {/* Background Image */}
         {/*
         <div className="absolute inset-0 z-0">
@@ -202,8 +202,8 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                     absolute
                     -left-20
                     top-0
-                    w-[450px]
-                    h-[450px]
+                    h-[min(450px,100vw)]
+                    w-[min(450px,100vw)]
                     rounded-full
                     bg-red-500/10
                     blur-3xl
@@ -214,7 +214,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                   className="
                     relative
                     text-4xl
-                    sm:text-6xl
+                    sm:text-5xl
                     lg:text-[5.5rem]
                     xl:text-[7rem]
                     font-black
@@ -254,7 +254,7 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
 
                 <button
                   className="
-                    px-8
+                    w-full px-6 sm:w-auto sm:px-8
                     py-4
                     bg-red-600
                     hover:bg-red-700
@@ -473,12 +473,12 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
         }}
         variants={staggerContainer}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             className="
               grid
               lg:grid-cols-[1fr_1.35fr]
-              gap-16
+              gap-10 sm:gap-16
               lg:gap-24
               items-start
             "
@@ -489,7 +489,8 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
   variants={fadeUp}
   className={`
     font-sans
-    text-5xl
+    text-3xl
+    sm:text-4xl
     md:text-6xl
     lg:text-[5.8rem]
     font-black
@@ -514,11 +515,10 @@ export default function Hero({ onProvinceSelect }: HeroProps) {
                   max-w-2xl
                 "
               >
-                DoctorCare delivers fully transparent and detailed financial
-                reporting, analytics, insights, and simple recommendations that
-                ensure healthcare providers finally have peace of mind in
-                understanding exactly how they are paid and how to optimize
-                their revenue every month.
+                GNF Billing brings clear financial reporting, practical
+                analytics, and focused recommendations together so healthcare
+                teams can understand payment activity and improve their billing
+                workflow with confidence.
               </motion.p>
             </motion.div>
 

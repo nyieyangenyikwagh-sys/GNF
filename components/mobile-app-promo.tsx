@@ -10,9 +10,7 @@ export default function MobileAppPromo() {
       className={`
         font-sans
         relative
-        left-1/2
-        w-screen
-        -translate-x-1/2
+        w-full
         overflow-hidden
         bg-[#795274]
         py-16
@@ -23,7 +21,7 @@ export default function MobileAppPromo() {
       <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-white/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-32 h-[320px] w-[420px] rounded-full bg-black/20 blur-3xl" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_0.95fr]">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:gap-12 lg:px-8">
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -45 }}
@@ -34,12 +32,13 @@ export default function MobileAppPromo() {
         >
           <h2
             className="
-              text-5xl
+              text-3xl
+              sm:text-4xl
               font-extrabold
               leading-[1.08]
               tracking-[-0.06em]
               text-white
-              md:text-6xl
+              md:text-5xl
               lg:text-[4.8rem]
             "
           >
@@ -50,11 +49,11 @@ export default function MobileAppPromo() {
             className="
               mt-8
               max-w-2xl
-              text-xl
+              text-lg
               font-semibold
               leading-9
               text-white/95
-              md:text-2xl
+              md:text-xl
             "
           >
             Submit claims anytime, anywhere and enjoy effortless medical
@@ -90,14 +89,15 @@ export default function MobileAppPromo() {
           </div>
 
           {/* App Buttons */}
-          <div className="mt-12 flex flex-wrap gap-5">
+          <div className="mt-8 flex flex-col gap-3 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-5">
             <a
               href="#"
               className="
                 group
                 flex
                 h-[68px]
-                min-w-[230px]
+                w-full
+                sm:min-w-[230px]
                 items-center
                 gap-4
                 rounded-lg
@@ -133,7 +133,8 @@ export default function MobileAppPromo() {
                 group
                 flex
                 h-[68px]
-                min-w-[230px]
+                w-full
+                sm:min-w-[230px]
                 items-center
                 gap-4
                 rounded-lg
